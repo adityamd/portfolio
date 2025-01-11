@@ -15,7 +15,7 @@ import { useEffect } from 'react';
 function App() {
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({duration: 500});
     AOS.refresh();
   }, [])
 
