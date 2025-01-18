@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://adityasportfolioadmin-368b40b5c9fe.herokuapp.com/",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -9,6 +10,7 @@
     "@mui/material": "^6.3.1",
     "@mui/styled-engine-sc": "^6.3.1",
     "aos": "^3.0.0-beta.6",
+    "axios": "^1.7.9",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
@@ -16,6 +18,7 @@
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.3",
+    "react-toastify": "^11.0.3",
     "serve": "^14.2.4",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.14",

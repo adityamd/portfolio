@@ -10,7 +10,9 @@ import Portfolio from './components/pages/Portfolio';
 import Testimonials from './components/pages/Testimonials';
 import Blog from './components/pages/Blog';
 import { Contact } from './components/pages/Contact';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
+import { FieldProvider } from './context/FieldContext'
 
 function App() {
 
@@ -20,7 +22,7 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <FieldProvider>
       <Router>
         <Header />
         <Routes>
@@ -33,7 +35,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
-    </div>
+      <ToastContainer />
+    </FieldProvider>
   );
 }
 

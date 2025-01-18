@@ -1,9 +1,12 @@
-
-import React from "react"
-import { contact } from "../data/dummyData"
+import React, { useContext } from "react"
 import Heading from "../common/Heading"
-
+import { FieldContext } from "../../context/FieldContext"
+import { AddLocationAltOutlined, PhoneIphone, EmailOutlined} from "@mui/icons-material"
 export const Contact = () => {
+
+  const { allFields } = useContext(FieldContext)
+  const contact = allFields.contact
+
   return (
     <>
       <div className='contact'>
@@ -22,13 +25,21 @@ export const Contact = () => {
               </form>
             </div>
             <div className='left'>
-              {contact.map((item) => (
-                <div className='box' data-aos='zoom-in'>
-                  <i>{item.icon}</i>
-                  <p>{item.text1}</p>
-                  <p>{item.text2}</p>
-                </div>
-              ))}
+              <div className='box' data-aos='zoom-in'>
+                <i><AddLocationAltOutlined /></i>
+                <p>{contact.addr1}</p>
+                <p>{contact.addr2}</p>
+              </div>
+              <div className='box' data-aos='zoom-in'>
+                <i><PhoneIphone /></i>
+                <p>{contact.phone1}</p>
+                <p>{contact.phone2}</p>
+              </div>
+              <div className='box' data-aos='zoom-in'>
+                <i><EmailOutlined /></i>
+                <p>{contact.email1}</p>
+                <p>{contact.email2}</p>
+              </div>
             </div>
           </div>
         </div>

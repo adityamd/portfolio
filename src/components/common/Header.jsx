@@ -1,12 +1,14 @@
-import React from 'react'
-import { navlink } from '../data/dummyData'
-import logo from '../data/images/logo.png'
+import React, { useContext } from 'react'
+import logo from '../data/logo.png'
 import { Link } from 'react-router-dom'
 import { Menu } from '@mui/icons-material'
+import { FieldContext } from '../../context/FieldContext'
 
 const Header = () => {
 
     const [responsive, setResponsive] = React.useState(false)
+    const { allFields } = useContext(FieldContext)
+    const navlink = allFields.navLinks
 
     return (
         <header>

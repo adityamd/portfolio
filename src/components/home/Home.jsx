@@ -10,6 +10,7 @@ import { Contact } from '../pages/Contact'
 import Footer from '../common/Footer'
 
 const Home = () => {
+  
   return (
     <div>
         <Hero />
