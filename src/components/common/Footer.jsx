@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Facebook, Twitter, Instagram, YouTube } from "@mui/icons-material"
+import { Twitter, Instagram, YouTube, LinkedIn } from "@mui/icons-material"
 import { FieldContext } from '../../context/FieldContext'
 
 const Footer = () => {
@@ -9,8 +9,8 @@ const Footer = () => {
 
   return (
     <footer>
-        <a href={social.facebook}>
-            <i className="cursor"  data-aos='zoom-in-left'><Facebook /></i>
+        <a href={social.linkedin}>
+            <i className="cursor"  data-aos='zoom-in-left'><LinkedIn /></i>
         </a>
         <a href={social.twitter}>
             <i className="cursor"  data-aos='zoom-in-left'><Twitter /></i>
