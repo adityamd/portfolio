@@ -31,7 +31,7 @@ const Blog = () => {
         <section className="blog">
             <div className="container">
                 <Heading title="Blog" />
-                <div className="container grid3">
+                <div className="grid3">
                 {
                     blog.map((item, idx) => (
                         <div className="box" data-aos='flip-left'>

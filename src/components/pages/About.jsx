@@ -7,15 +7,23 @@ const About = () => {
 
   const { allFields, url } = useContext(FieldContext);
   const [imageUrl, setImageUrl] = useState('')
+  const [cv, setCV] = useState('')
   const about = allFields.about
 
   const getFetchUrl = async() => {
     const res = await axios.get(url+'s3/url/get/' + encodeURIComponent('about.jpg'));
     setImageUrl(res.data)
   }
+  
+
+  const downloadCV = async() => {
+    const res = await axios.get(url+'s3/url/get/' + encodeURIComponent('Aditya-resume.pdf'));
+    setCV(res.data);
+  }
 
   useEffect(() => {
     getFetchUrl()
+    downloadCV()
   }, [])
 
   return (
@@ -28,8 +36,9 @@ const About = () => {
                   <Heading title="About me" />
                   <h1>{about.desc}</h1>
                   <p>{about.desc1}</p>
-                  <button >Download CV</button>
-                  <button className="primaryBtn">Download CV</button>
+                  <a href={cv} target='_blank'>
+                    <button className='center'>Download CV</button>
+                  </a>
               </div>
         </div>
     </section>

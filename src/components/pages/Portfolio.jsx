@@ -18,6 +18,7 @@ const Portfolio = () => {
             setList(portfolio)
             return
         }
+        console.log(cat)
         const newList = portfolio.filter(item => item.category === cat)
         setList(newList)
     }
@@ -32,7 +33,9 @@ const Portfolio = () => {
           await getCover(idx)
       ))
       cover = await Promise.all(cover)
-      console.log(cover)
+      list.map((item, idx) => {
+        item.cover = cover[idx];
+      })
       setCovers(cover)
   }
 
@@ -57,7 +60,7 @@ const Portfolio = () => {
                     list.map((item, i) => (
                         <div className="box"  data-aos='fade-up'>
                             <div className="img">
-                                <img src={covers[i]} alt="" />
+                                <img src={item.cover} alt="" />
                             </div>
                             <div className="overlay">
                                 <h3>{item.title}</h3>

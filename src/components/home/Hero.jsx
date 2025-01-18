@@ -15,7 +15,6 @@ const Hero = () => {
             <Typewriter options={{ strings: [home.name, home.post, home.design], autoStart: true, loop: true }} />
         </h1>
         <p className='desc' data-aos='fade-left'>{home.desc}</p>
-        <button className="primaryBtn" data-aos='fade-up'>Download CV</button>
     </div>    
     </section>
   )
