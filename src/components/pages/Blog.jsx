@@ -5,12 +5,12 @@ import axios from 'axios'
 
 const Blog = () => {
 
-    const { allFields } = useContext(FieldContext)
+    const { allFields, url } = useContext(FieldContext)
     const [covers, setCovers] = useState([])
     const blog = allFields.blogs
 
     const getCover = async (idx) => {
-        const res = await axios.get('s3/url/get/' + encodeURIComponent(`blog/b${idx}.jpg`));
+        const res = await axios.get(url+'/s3/url/get/' + encodeURIComponent(`blog/b${idx}.jpg`));
         return res.data
     }
 

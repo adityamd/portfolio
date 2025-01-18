@@ -5,12 +5,12 @@ import axios from 'axios'
 
 const About = () => {
 
-  const { allFields } = useContext(FieldContext);
+  const { allFields, url } = useContext(FieldContext);
   const [imageUrl, setImageUrl] = useState('')
   const about = allFields.about
 
   const getFetchUrl = async() => {
-    const res = await axios.get('s3/url/get/' + encodeURIComponent('about.jpg'));
+    const res = await axios.get(url+'/s3/url/get/' + encodeURIComponent('about.jpg'));
     setImageUrl(res.data)
   }
 

@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const Testimonials = () => {
 
-    const { allFields } = useContext(FieldContext)
+    const { allFields, url } = useContext(FieldContext)
     const testimonials = allFields.testimonials
     const [images, setImages] = useState([])
 
@@ -21,7 +21,7 @@ const Testimonials = () => {
       };
 
       const getCover = async (idx) => {
-        const res = await axios.get('s3/url/get/' + encodeURIComponent(`testimonials/team-${idx}.jpg`));
+        const res = await axios.get(url+'s3/url/get/' + encodeURIComponent(`testimonials/team-${idx}.jpg`));
         return res.data
     }
 

@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const Portfolio = () => {
 
-    const { allFields } = useContext(FieldContext)
+    const { allFields, url } = useContext(FieldContext)
     const portfolio = allFields.portfolio;
     const allCategories = ['All', ...new Set(portfolio.map(item => item.category))]
     const [list, setList] = React.useState(portfolio)
@@ -23,7 +23,7 @@ const Portfolio = () => {
     }
 
     const getCover = async (idx) => {
-      const res = await axios.get('s3/url/get/' + encodeURIComponent(`port/port${idx}.jpg`));
+      const res = await axios.get(url+'s3/url/get/' + encodeURIComponent(`port/port${idx}.jpg`));
       return res.data
   }
 
