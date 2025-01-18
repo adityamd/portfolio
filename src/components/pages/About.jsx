@@ -17,7 +17,7 @@ const About = () => {
   
 
   const downloadCV = async() => {
-    const res = await axios.get(url+'s3/url/get/' + encodeURIComponent('Aditya-resume.pdf'));
+    const res = await axios.get(url+'s3/url/get/' + encodeURIComponent('Aditya-Resume.pdf'));
     setCV(res.data);
   }
 
