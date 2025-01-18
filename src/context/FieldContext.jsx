@@ -19,7 +19,7 @@ export const FieldProvider = ({ children }) => {
 
     const getData = async () => {
         try{
-            const res = await axios.get('https://adityasportfolioadmin-368b40b5c9fe.herokuapp.com/api/field');
+            const res = await axios.get('/api/field');
             console.log(res.data[0].allFields)
             setAllFields(res.data[0].allFields);      
             setIsLoading(false);      
