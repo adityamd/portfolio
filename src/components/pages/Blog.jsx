@@ -10,7 +10,7 @@ const Blog = () => {
     const blog = allFields.blogs
 
     const getCover = async (idx) => {
-        const res = await axios.get(url+'/s3/url/get/' + encodeURIComponent(`blog/b${idx}.jpg`));
+        const res = await axios.get(url+'s3/url/get/' + encodeURIComponent(`blog/b${idx}.jpg`));
         return res.data
     }
 

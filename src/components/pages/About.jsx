@@ -10,7 +10,7 @@ const About = () => {
   const about = allFields.about
 
   const getFetchUrl = async() => {
-    const res = await axios.get(url+'/s3/url/get/' + encodeURIComponent('about.jpg'));
+    const res = await axios.get(url+'s3/url/get/' + encodeURIComponent('about.jpg'));
     setImageUrl(res.data)
   }
 
