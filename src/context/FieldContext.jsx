@@ -19,7 +19,7 @@ export const FieldProvider = ({ children }) => {
 
     const getData = async () => {
         try{
-            const res = await axios.get('https://adityasportfolioadmin-368b40b5c9fe.herokuapp.com/api/field');
+            const res = await axios.get('http://51.20.70.65:5000/api/field');
             setAllFields(res.data[0].allFields);
             setIsLoading(false);      
         } catch(error){
@@ -29,7 +29,7 @@ export const FieldProvider = ({ children }) => {
 
     const value = {
         allFields: allFields,
-        url: "https://adityasportfolioadmin-368b40b5c9fe.herokuapp.com/",
+        url: "http://51.20.70.65:5000/",
         getData
     }
 
